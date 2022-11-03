@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NKb-hI-Qgh">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trending-->
+        <scene sceneID="KRV-hX-IG8">
+            <objects>
+                <viewController id="9xi-59-HCE" customClass="TrendingViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IdS-Gm-mgD">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAr-Pi-9ST">
+                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="ruA-72-dGK"/>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bbw-gm-J8v">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="j0C-O2-hEe"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dap-cr-FZy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Trending" image="chart.line.uptrend.xyaxis" catalog="system" selectedImage="chart.line.uptrend.xyaxis" id="Ujx-ja-sDY"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="RAr-Pi-9ST" id="OTF-w4-RIi"/>
+                        <segue destination="cR4-EV-uVW" kind="presentation" identifier="TrendingViewToRecipeDetailViewControllerSegue" id="OVP-Co-m9b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2b-Wq-zEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429" y="1450"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="HDV-h6-9Vc">
+            <objects>
+                <viewController id="juU-Ag-NoB" customClass="UsersViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RSZ-3j-sF3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWV-Ov-24z">
+                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="kwD-jJ-noL"/>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vsj-Ie-PDI">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="BBl-Tw-KFf"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zUr-ZJ-dbe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Users" image="person.3" catalog="system" selectedImage="person.3.fill" id="fKs-jj-IkV"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="AWV-Ov-24z" id="ZtY-7i-l8y"/>
+                        <segue destination="FW9-Yb-Mpc" kind="presentation" identifier="UsersViewToUsersRecipeViewSegue" id="22g-Gb-imh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vF-EM-Til" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430" y="2156"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="RNH-W0-xxN">
+            <objects>
+                <viewController id="l6u-qP-BNK" customClass="SearchViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dJo-V1-6gs">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EnK-NY-Ybk">
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Search" id="LJW-Aa-3Dc"/>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2U8-36-0zW">
+                                <rect key="frame" x="0.0" y="3" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="0ny-EV-0Bb"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for recipes..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zd0-7T-T66">
+                                <rect key="frame" x="16" y="111" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiQ-cs-bmi">
+                                <rect key="frame" x="16" y="153" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Let's go!"/>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="l6u-qP-BNK" eventType="touchUpInside" id="V8A-yG-9wN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RHe-cA-FYX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" selectedImage="magnifyingglass" catalog="system" systemItem="search" id="rrQ-Eq-0pQ"/>
+                    <connections>
+                        <outlet property="searchButton" destination="MiQ-cs-bmi" id="DcF-MM-KgC"/>
+                        <outlet property="searchText" destination="Zd0-7T-T66" id="qMs-45-1w9"/>
+                        <segue destination="cR4-EV-uVW" kind="presentation" identifier="SearchViewToRecipeDetailViewControllerSegue" id="4Lu-ZH-nGn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHJ-cv-8Dt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429" y="2940"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="UOe-bh-t0S">
+            <objects>
+                <viewController id="ikZ-fr-JTX" customClass="ViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qpg-is-XJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MXM-Lw-ldd">
+                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="dOF-aT-o1E"/>
+                                </items>
+                            </navigationBar>
+                            <navigationBar opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-PD-R07">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="thB-DR-WL0"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e4l-dr-xnU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="Xdb-Ac-v09"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="MXM-Lw-ldd" id="I1M-67-rR8"/>
+                        <segue destination="cR4-EV-uVW" kind="presentation" identifier="HomeViewControllerToRecipeDetailViewControllerSegue" id="VzY-Gk-04R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVM-a0-MCq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429" y="713"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="khc-75-NgJ">
+            <objects>
+                <tabBarController id="NKb-hI-Qgh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X2o-RR-FXg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ikZ-fr-JTX" kind="relationship" relationship="viewControllers" id="HPs-hi-GOb"/>
+                        <segue destination="9xi-59-HCE" kind="relationship" relationship="viewControllers" id="FKY-oN-a2y"/>
+                        <segue destination="juU-Ag-NoB" kind="relationship" relationship="viewControllers" id="wSw-gA-YBN"/>
+                        <segue destination="l6u-qP-BNK" kind="relationship" relationship="viewControllers" id="98T-cn-eew"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vkU-1b-baF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-909" y="1450"/>
+        </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="SWv-gi-6tR">
+            <objects>
+                <viewController id="cR4-EV-uVW" customClass="RecipeDetailViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iyK-oi-k1Q">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zU5-4t-io8">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="5tT-2W-KWe">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" style="done" id="uzd-U2-aHK">
+                                            <connections>
+                                                <action selector="doneWithRecipeDetailViewWithSender:" destination="cR4-EV-uVW" id="Rxi-Jd-yM5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3M-PD-6bI">
+                                <rect key="frame" x="0.0" y="56" width="414" height="297"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D9Q-HN-Jf9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="zU5-4t-io8" id="tln-8k-sub"/>
+                        <outlet property="recipeImageView" destination="N3M-PD-6bI" id="fjo-04-a1u"/>
+                        <segue destination="14j-Lh-gGq" kind="presentation" identifier="RecipeDetailViewToPurchaseViewControllerSegue" id="kDl-Ha-Nqh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FGC-jS-euH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3075" y="1142"/>
+        </scene>
+        <!--Purchase View Controller-->
+        <scene sceneID="t2R-zu-iKQ">
+            <objects>
+                <viewController id="14j-Lh-gGq" customClass="PurchaseViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Txk-3Z-BoY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fdJ-BH-4rB">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="GNb-yu-Tsu">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="tpf-bp-tnF">
+                                            <connections>
+                                                <action selector="doneButtonClickedWithSender:" destination="14j-Lh-gGq" id="Ig9-yD-VLm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZdJ-bh-pzY">
+                                <rect key="frame" x="0.0" y="57" width="414" height="297"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2cZ-O0-PaQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="fdJ-BH-4rB" id="HcW-g8-ln7"/>
+                        <outlet property="recipeImageView" destination="ZdJ-bh-pzY" id="rSE-iB-tmz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Et5-k9-mto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4419" y="1142"/>
+        </scene>
+        <!--User Recipes List View Controller-->
+        <scene sceneID="j93-JE-7es">
+            <objects>
+                <viewController id="FW9-Yb-Mpc" customClass="UserRecipesListViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ddE-P0-WO9">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5i-TH-vSS">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="wG4-vF-Xq4">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" style="done" id="VZ6-td-upy">
+                                            <connections>
+                                                <segue destination="0SL-bN-WOQ" kind="unwind" unwindAction="unwindToUsersViewControllerWithSender:" id="e01-hA-ryi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5o0-dU-2zk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="d5i-TH-vSS" id="UVg-de-M3c"/>
+                        <segue destination="cR4-EV-uVW" kind="presentation" identifier="UserRecipesListViewToRecipeDetailViewControllerSegue" id="8Mh-gk-lx9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGY-LP-bX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0SL-bN-WOQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3074" y="2156"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Lu-ZH-nGn"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="chart.line.uptrend.xyaxis" catalog="system" width="128" height="102"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
